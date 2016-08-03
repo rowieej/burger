@@ -3,6 +3,28 @@ Here is the O.R.M. where you write functions that takes inputs and conditions an
 */
 var connection = require('../config/connection.js');
 
+function printQuestionMarks(num) {
+  var arr = [];
+
+  for (var i = 0; i < num; i++) {
+    arr.push('?');
+  }
+
+  return arr.toString();
+}
+
+function objToSql(ob) {
+  // column1=value, column2=value2,...
+  var arr = [];
+
+  for (var key in ob) {
+    if (ob.hasOwnProperty(key)) {
+      arr.push(key + '=' + ob[key]);
+    }
+  }
+
+  return arr.toString();
+}
 //create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 var orm = {
   
