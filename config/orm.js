@@ -4,10 +4,50 @@ Here is the O.R.M. where you write functions that takes inputs and conditions an
 var connection = require('../config/connection.js');
 
 //create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+var orm = {
+  
+  selectAll: function (tableInput, cb) {
+    var queryString = 'SELECT * FROM ' + tableInput + ';';
+    connection.query(queryString, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
+  },
+  
+  insertOne: function (table, cols, vals, cb) {
+    var queryString = 'INSERT INTO ' + table;
 
-// selectAll()
-// insertOne()
-// updateOne()
+    queryString = queryString + ' (';
+    queryString = queryString + cols.toString();
+    queryString = queryString + ') ';
+    queryString = queryString + 'VALUES (';
+    queryString = queryString + printQuestionMarks(vals.length);
+    queryString = queryString + ') ';
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
+  },
+
+  updateOne: function (table, objColVals, condition, cb) {
+    var queryString = 'UPDATE ' + table;
+
+    queryString = queryString + ' SET ';
+    queryString = queryString + objToSql(objColVals);
+    queryString = queryString + ' WHERE ';
+    queryString = queryString + condition;
+
+    console.log(queryString);
+    connection.query(queryString, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    });
+  }
+};
+
 // Export the ORM object in module.exports.
 
 module.exports = orm;
