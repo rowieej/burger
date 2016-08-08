@@ -1,7 +1,7 @@
 
 <div class="newBurgers">
   <div class="panel panel-default">
-    <div class="panel-heading" id="panel-heading-left"><h3>Get In My Belly!</h3>
+    <div class="panel-heading" id="panel-heading-left"><h4>BURGERS YOU WANT</h4>
     </div>
       <div class="panel-body">
         <ul>
@@ -13,7 +13,7 @@
 
                 <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="devoured" value="true">
-                  <button type="submit">Devour It!!</button>
+                  <button type="submit" id="left-button">Devour It!!</button>
                 </form>
 
               </li>
@@ -28,7 +28,7 @@
 
 <div class="eatenBurgers">
   <div class="panel panel-default panel-right">
-    <div class="panel-heading" id="panel-heading-right"><h3>Killed It!</h3>
+    <div class="panel-heading" id="panel-heading-right"><h4>BURGERS YOU ATE</h4>
     </div>
       <div class="panel-body">
 
@@ -40,7 +40,7 @@
 
               <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="false">
-                <button type="submit">Can't believe I ate this!</button>
+                <button type="submit">I want it again!</button>
               </form>
             </li>
           {{/if}}
@@ -53,7 +53,7 @@
 
 
 <div class="addBurger">
-    <h2>Add a burger</h2>
+    <h2>What burger are you in the mood for?</h2>
     <form class="create-update-form" action="burgers/create" method="POST">
 
       <div class="form-group">

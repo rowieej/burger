@@ -11,7 +11,7 @@ body {
   margin: 70px;
   text-align: center;
   color: orange;
-  width: 75%;
+  width: 80%;
 }
 
 .panel{
@@ -45,5 +45,6 @@ body {
 .addBurger{
   position: relative;
   text-align: center;
+  margin: 150px;
 }
 
