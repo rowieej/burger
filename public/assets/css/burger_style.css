@@ -1,0 +1,49 @@
+body {
+  background-color: yellow;
+  background-image: url("http://www.pptbackgrounds.org/uploads/hamburger-menu-powerpoint-backgrounds.jpg");
+  background-size: cover;
+ 
+}
+
+.titleBar{
+  background-color: yellow;
+  padding: 10px;
+  margin: 70px;
+  text-align: center;
+  color: orange;
+  width: 75%;
+}
+
+.panel{
+  width: 25%;
+  float: left;
+  margin-left: 50px;
+}
+
+.panel-left{
+  width: 25%;
+  float: left;
+  margin-left: 50px;
+}
+
+.panel-right{
+  float: right;
+  margin-right: 50px;
+}
+
+#panel-heading-left{
+  background-color: orange !important;
+  text-align: center;
+}
+
+#panel-heading-right{
+  background-color: yellow !important;
+  text-align: center;
+}
+
+
+.addBurger{
+  position: relative;
+  text-align: center;
+}
+

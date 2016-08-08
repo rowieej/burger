@@ -5,10 +5,20 @@ Here is the main HTML where handlebars will render to
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <title>Devour Some Burgers!</title>
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+
+    <title>Burgers, Burgers, Burgers</title>
   </head>
   <body>
+  
+      <div class="titleBar">
+          <h1>Hungry?</h1>
+          <p><h3>Let's Eat Some Burgers!</h3></p>
+      </div>
+
     {{{ body }}}
   </body>
 </HTML>

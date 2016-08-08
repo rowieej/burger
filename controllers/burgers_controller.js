@@ -27,7 +27,7 @@ router.get('/burgers', function (req, res) {
 });
 
 router.post('/burgers/create', function (req, res) {
-  burger.insertOne(['name', 'devoured'], [req.body.name, req.body.devoured], function () {
+  burger.insertOne(['burger_name', 'devoured'], [req.body.name, req.body.devoured], function () {
     res.redirect('/burgers');
   });
 });
