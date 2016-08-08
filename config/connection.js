@@ -2,7 +2,7 @@
 
 var mysql = require('mysql');
 var keys = require('./keys');
-var jaws = require('.jaws');
+var jaws = require('./jaws');
 var source = {
   localhost: {
     port: 3306,
