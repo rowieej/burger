@@ -21,13 +21,8 @@ var source = {
   }
 }
 
-var connection = mysql.createConnection({
-  port: 3306,
-  host: 'localhost',
-  user: keys.user,
-  password: keys.password,
-  database: 'burgers_db'
-});
+var connection = mysql.createConnection( source.jawsDB );
+
 
 connection.connect(function (err) {
   if (err) {
